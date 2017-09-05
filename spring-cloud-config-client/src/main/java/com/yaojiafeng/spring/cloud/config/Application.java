@@ -25,9 +25,5 @@ public class Application {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
-
-        Object properties = applicationContext.getBean("myAutoConfiguration");
-
-        System.out.println(properties);
     }
 }
