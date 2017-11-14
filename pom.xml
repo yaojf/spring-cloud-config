@@ -13,6 +13,7 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-config-client</module>
         <module>spring-boot-noweb</module>
+        <module>spring-boot-web</module>
     </modules>
 
 

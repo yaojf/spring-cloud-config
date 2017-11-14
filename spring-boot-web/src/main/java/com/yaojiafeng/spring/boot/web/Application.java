@@ -1,4 +1,4 @@
-package com.yaojiafeng.spring.boot.noweb;
+package com.yaojiafeng.spring.boot.web;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import java.util.Date;
 
 /**
- * 非web工程，运行完jvm实例就结束
+ * web工程，运行完jvm实例持续监听状态，不停止
  *
  * Created by yaojiafeng on 2017/6/19 上午11:27.
  */
