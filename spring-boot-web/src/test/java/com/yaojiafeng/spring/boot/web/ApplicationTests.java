@@ -1,9 +1,11 @@
 package com.yaojiafeng.spring.boot.web;
 
 import com.yaojiafeng.spring.boot.web.controller.UserController;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -57,6 +59,16 @@ public class ApplicationTests {
         // 7、get查一下user列表，应该为空
         request = get("/users/");
         mvc.perform(request).andExpect(status().isOk()).andExpect(content().string(equalTo("[]")));
+    }
+
+
+    @Autowired
+    private BlogProperties blogProperties;
+
+    @Test
+    public void getHello() throws Exception {
+        Assert.assertEquals(blogProperties.getName(), "name");
+        Assert.assertEquals(blogProperties.getTitle(), "title");
     }
 
 }
